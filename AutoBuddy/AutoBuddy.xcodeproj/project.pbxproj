@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293AA8131E46B33F005FD069 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293AA8121E46B33F005FD069 /* SignUpVC.swift */; };
+		293AA8151E46B73C005FD069 /* road.png in Resources */ = {isa = PBXBuildFile; fileRef = 293AA8141E46B73C005FD069 /* road.png */; };
 		29A956691E303CA700AAAD08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A956681E303CA700AAAD08 /* AppDelegate.swift */; };
-		29A9566B1E303CA700AAAD08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A9566A1E303CA700AAAD08 /* ViewController.swift */; };
+		29A9566B1E303CA700AAAD08 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A9566A1E303CA700AAAD08 /* LoginVC.swift */; };
 		29A9566E1E303CA700AAAD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A9566C1E303CA700AAAD08 /* Main.storyboard */; };
 		29A956701E303CA700AAAD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A9566F1E303CA700AAAD08 /* Assets.xcassets */; };
 		29A956731E303CA700AAAD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A956711E303CA700AAAD08 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		293AA8121E46B33F005FD069 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		293AA8141E46B73C005FD069 /* road.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road.png; path = Assets.xcassets/road.png; sourceTree = "<group>"; };
 		29A956651E303CA700AAAD08 /* AutoBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A956681E303CA700AAAD08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		29A9566A1E303CA700AAAD08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29A9566A1E303CA700AAAD08 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		29A9566D1E303CA700AAAD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29A9566F1E303CA700AAAD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29A956721E303CA700AAAD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,9 +59,11 @@
 			isa = PBXGroup;
 			children = (
 				29A956681E303CA700AAAD08 /* AppDelegate.swift */,
-				29A9566A1E303CA700AAAD08 /* ViewController.swift */,
+				29A9566A1E303CA700AAAD08 /* LoginVC.swift */,
+				293AA8121E46B33F005FD069 /* SignUpVC.swift */,
 				29A9566C1E303CA700AAAD08 /* Main.storyboard */,
 				29A9566F1E303CA700AAAD08 /* Assets.xcassets */,
+				293AA8141E46B73C005FD069 /* road.png */,
 				29A956711E303CA700AAAD08 /* LaunchScreen.storyboard */,
 				29A956741E303CA700AAAD08 /* Info.plist */,
 			);
@@ -124,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A956731E303CA700AAAD08 /* LaunchScreen.storyboard in Resources */,
+				293AA8151E46B73C005FD069 /* road.png in Resources */,
 				29A956701E303CA700AAAD08 /* Assets.xcassets in Resources */,
 				29A9566E1E303CA700AAAD08 /* Main.storyboard in Resources */,
 			);
@@ -136,7 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29A9566B1E303CA700AAAD08 /* ViewController.swift in Sources */,
+				29A9566B1E303CA700AAAD08 /* LoginVC.swift in Sources */,
+				293AA8131E46B33F005FD069 /* SignUpVC.swift in Sources */,
 				29A956691E303CA700AAAD08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +307,7 @@
 				29A956791E303CA700AAAD08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

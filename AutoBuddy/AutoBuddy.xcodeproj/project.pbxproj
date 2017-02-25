@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 29A956601E303CA700AAAD08 /* Build configuration list for PBXProject "CarCompare" */;
+			buildConfigurationList = 29A956601E303CA700AAAD08 /* Build configuration list for PBXProject "AutoBuddy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -379,7 +379,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		29A956601E303CA700AAAD08 /* Build configuration list for PBXProject "CarCompare" */ = {
+		29A956601E303CA700AAAD08 /* Build configuration list for PBXProject "AutoBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				29A956751E303CA700AAAD08 /* Debug */,

@@ -17,7 +17,7 @@
                BlueprintIdentifier = "29A956641E303CA700AAAD08"
                BuildableName = "AutoBuddy.app"
                BlueprintName = "AutoBuddy"
-               ReferencedContainer = "container:CarCompare.xcodeproj">
+               ReferencedContainer = "container:AutoBuddy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "29A956641E303CA700AAAD08"
             BuildableName = "AutoBuddy.app"
             BlueprintName = "AutoBuddy"
-            ReferencedContainer = "container:CarCompare.xcodeproj">
+            ReferencedContainer = "container:AutoBuddy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "29A956641E303CA700AAAD08"
             BuildableName = "AutoBuddy.app"
             BlueprintName = "AutoBuddy"
-            ReferencedContainer = "container:CarCompare.xcodeproj">
+            ReferencedContainer = "container:AutoBuddy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "29A956641E303CA700AAAD08"
             BuildableName = "AutoBuddy.app"
             BlueprintName = "AutoBuddy"
-            ReferencedContainer = "container:CarCompare.xcodeproj">
+            ReferencedContainer = "container:AutoBuddy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

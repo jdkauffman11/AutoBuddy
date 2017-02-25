@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/jordankauffman/GitHub/AutoBuddy/AutoBuddy/CarCompare.xcodeproj">
+      location = "group:/Users/jordankauffman/GitHub/AutoBuddy/AutoBuddy/AutoBuddy.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		293AA8131E46B33F005FD069 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293AA8121E46B33F005FD069 /* SignUpVC.swift */; };
 		293AA8151E46B73C005FD069 /* road.png in Resources */ = {isa = PBXBuildFile; fileRef = 293AA8141E46B73C005FD069 /* road.png */; };
 		29A956691E303CA700AAAD08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A956681E303CA700AAAD08 /* AppDelegate.swift */; };
 		29A9566B1E303CA700AAAD08 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A9566A1E303CA700AAAD08 /* LoginVC.swift */; };
 		29A9566E1E303CA700AAAD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A9566C1E303CA700AAAD08 /* Main.storyboard */; };
 		29A956701E303CA700AAAD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A9566F1E303CA700AAAD08 /* Assets.xcassets */; };
 		29A956731E303CA700AAAD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A956711E303CA700AAAD08 /* LaunchScreen.storyboard */; };
+		29F7BE751E61235C005B3963 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29F7BE741E61235C005B3963 /* GoogleService-Info.plist */; };
+		CFDEE945490EDC0A5029A693 /* Pods_AutoBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4905EB247E4A3907C3BECA7 /* Pods_AutoBuddy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		293AA8121E46B33F005FD069 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		293AA8141E46B73C005FD069 /* road.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road.png; path = Assets.xcassets/road.png; sourceTree = "<group>"; };
 		29A956651E303CA700AAAD08 /* AutoBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A956681E303CA700AAAD08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +26,10 @@
 		29A9566F1E303CA700AAAD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29A956721E303CA700AAAD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29A956741E303CA700AAAD08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29F7BE741E61235C005B3963 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2C21B46B95A5F834BB594115 /* Pods-AutoBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoBuddy/Pods-AutoBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		2E7748667A45FBA5BA172FF8 /* Pods-AutoBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoBuddy/Pods-AutoBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		F4905EB247E4A3907C3BECA7 /* Pods_AutoBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFDEE945490EDC0A5029A693 /* Pods_AutoBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D0BDB2A77A98DBA9179D520 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4905EB247E4A3907C3BECA7 /* Pods_AutoBuddy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		29A9565C1E303CA700AAAD08 = {
 			isa = PBXGroup;
 			children = (
 				29A956671E303CA700AAAD08 /* AutoBuddy */,
 				29A956661E303CA700AAAD08 /* Products */,
+				FCAB78C52554BB271DF22CE5 /* Pods */,
+				1D0BDB2A77A98DBA9179D520 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +75,23 @@
 			children = (
 				29A956681E303CA700AAAD08 /* AppDelegate.swift */,
 				29A9566A1E303CA700AAAD08 /* LoginVC.swift */,
-				293AA8121E46B33F005FD069 /* SignUpVC.swift */,
 				29A9566C1E303CA700AAAD08 /* Main.storyboard */,
 				29A9566F1E303CA700AAAD08 /* Assets.xcassets */,
 				293AA8141E46B73C005FD069 /* road.png */,
 				29A956711E303CA700AAAD08 /* LaunchScreen.storyboard */,
 				29A956741E303CA700AAAD08 /* Info.plist */,
+				29F7BE741E61235C005B3963 /* GoogleService-Info.plist */,
 			);
 			path = AutoBuddy;
+			sourceTree = "<group>";
+		};
+		FCAB78C52554BB271DF22CE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E7748667A45FBA5BA172FF8 /* Pods-AutoBuddy.debug.xcconfig */,
+				2C21B46B95A5F834BB594115 /* Pods-AutoBuddy.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29A956771E303CA700AAAD08 /* Build configuration list for PBXNativeTarget "AutoBuddy" */;
 			buildPhases = (
+				E84CBB7347D9F4886B77FF32 /* [CP] Check Pods Manifest.lock */,
 				29A956611E303CA700AAAD08 /* Sources */,
 				29A956621E303CA700AAAD08 /* Frameworks */,
 				29A956631E303CA700AAAD08 /* Resources */,
+				952290375E870CADF8BADDF5 /* [CP] Embed Pods Frameworks */,
+				817A021CAE7E50299659972A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -102,11 +129,12 @@
 				TargetAttributes = {
 					29A956641E303CA700AAAD08 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = XC29ANQV89;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 29A956601E303CA700AAAD08 /* Build configuration list for PBXProject "AutoBuddy" */;
+			buildConfigurationList = 29A956601E303CA700AAAD08 /* Build configuration list for PBXProject "CarCompare" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -131,6 +159,7 @@
 			files = (
 				29A956731E303CA700AAAD08 /* LaunchScreen.storyboard in Resources */,
 				293AA8151E46B73C005FD069 /* road.png in Resources */,
+				29F7BE751E61235C005B3963 /* GoogleService-Info.plist in Resources */,
 				29A956701E303CA700AAAD08 /* Assets.xcassets in Resources */,
 				29A9566E1E303CA700AAAD08 /* Main.storyboard in Resources */,
 			);
@@ -138,13 +167,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		817A021CAE7E50299659972A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoBuddy/Pods-AutoBuddy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		952290375E870CADF8BADDF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoBuddy/Pods-AutoBuddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E84CBB7347D9F4886B77FF32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		29A956611E303CA700AAAD08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				29A9566B1E303CA700AAAD08 /* LoginVC.swift in Sources */,
-				293AA8131E46B33F005FD069 /* SignUpVC.swift in Sources */,
 				29A956691E303CA700AAAD08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,32 +342,44 @@
 		};
 		29A956781E303CA700AAAD08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7748667A45FBA5BA172FF8 /* Pods-AutoBuddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XC29ANQV89;
 				INFOPLIST_FILE = AutoBuddy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jordan-Kauffman.AutoBuddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		29A956791E303CA700AAAD08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C21B46B95A5F834BB594115 /* Pods-AutoBuddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XC29ANQV89;
 				INFOPLIST_FILE = AutoBuddy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jordan-Kauffman.AutoBuddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		29A956601E303CA700AAAD08 /* Build configuration list for PBXProject "AutoBuddy" */ = {
+		29A956601E303CA700AAAD08 /* Build configuration list for PBXProject "CarCompare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				29A956751E303CA700AAAD08 /* Debug */,

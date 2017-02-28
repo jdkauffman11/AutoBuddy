@@ -29,7 +29,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQW-C5-v3B">
-                                <rect key="frame" x="207" y="188" width="90" height="25"/>
+                                <rect key="frame" x="207" y="188.5" width="90" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="8zm-yu-51q"/>
                                     <constraint firstAttribute="height" constant="25" id="SMP-14-ZZR"/>
@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="69.599999999999994" y="47.226386806596707"/>
         </scene>
-        <!--View Controller-->
+        <!--CompareVC-->
         <scene sceneID="2SU-Kc-J2h">
             <objects>
-                <viewController id="9zE-tA-l4l" sceneMemberID="viewController">
+                <viewController id="9zE-tA-l4l" customClass="CompareVC" customModule="AutoBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ymb-M3-GiE"/>
                         <viewControllerLayoutGuide type="bottom" id="sqt-c0-pyt"/>

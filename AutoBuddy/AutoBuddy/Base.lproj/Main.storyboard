@@ -154,6 +154,10 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextScreen:" destination="9zE-tA-l4l" eventType="touchUpInside" id="QQr-QJ-yCA"/>
+                                    <segue destination="2TA-Yc-yGj" kind="presentation" identifier="compare" id="3Zn-Sz-KLV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpz-nB-ZF7">
                                 <rect key="frame" x="16" y="65" width="343" height="21"/>
@@ -195,9 +199,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vh9-P9-gi4">
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vh9-P9-gi4">
                                 <rect key="frame" x="16" y="197" width="343" height="272"/>
                                 <color key="backgroundColor" red="0.46900337930000002" green="0.69024026390000004" blue="0.65920859580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.46900337930000002" green="0.69024026390000004" blue="0.65920859580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe3-cA-jQT">
                                 <rect key="frame" x="16" y="132" width="343" height="30"/>
@@ -246,13 +252,45 @@
                     <connections>
                         <outlet property="make" destination="3YG-o1-JbU" id="spE-wc-KFR"/>
                         <outlet property="model" destination="vWX-K7-eBS" id="782-xk-Nz9"/>
+                        <outlet property="nextButton" destination="AiW-9S-gh0" id="JgR-4H-B4u"/>
+                        <outlet property="subtitleLabel" destination="Tpz-nB-ZF7" id="UjN-Xw-tnj"/>
                         <outlet property="tableView" destination="vh9-P9-gi4" id="0q5-hT-Ris"/>
+                        <outlet property="titleLabel" destination="1R3-1M-e3L" id="DGi-s4-TAe"/>
                         <outlet property="year" destination="2rd-qa-j3S" id="hy3-qS-tYa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9t-Yn-I32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1085.5999999999999" y="46.326836581709152"/>
+            <point key="canvasLocation" x="1116" y="47"/>
+        </scene>
+        <!--CompareVC-->
+        <scene sceneID="rmG-61-1G0">
+            <objects>
+                <viewController id="2TA-Yc-yGj" customClass="CompareVC" customModule="AutoBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BSQ-m9-Obl"/>
+                        <viewControllerLayoutGuide type="bottom" id="lI8-ck-hQx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GK3-wq-q2d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Select a vehicle to search online" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGS-ji-hIn">
+                                <rect key="frame" x="16" y="28" width="343" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Mt7-6g-wHU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46900337930000002" green="0.69024026390000004" blue="0.65920859580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaw-Xo-sQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077.5999999999999" y="46.326836581709152"/>
         </scene>
     </scenes>
     <resources>

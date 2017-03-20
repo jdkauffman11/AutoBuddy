@@ -20,10 +20,16 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
     @IBOutlet var nextButton: UIButton!
     
     private var trims = [String]() // trims that the vehicle comes in
+    private var ids = [CLong]() // trims that the vehicle comes in
     private var status = 1 // used to keep track of current status
     private var trimDetails: NSArray = [] // holds the values of all trims. when one is selected, the relevant info is passed
     private var selectedTrimIndex = 0 // index of the trim selected
     private var vehicleOne: String!
+    
+    private var nameOne: String!
+    private var nameTwo: String!
+    private var idOne: CLong!
+    private var idTwo: CLong!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +65,11 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
     }
     
     @IBAction func nextScreen(_ sender: Any) {
+        parseData(data: trimDetails[selectedTrimIndex] as! Dictionary<String, Any>)
+        
         status += 1
-        if status == 2
+        
+        if status == 2 && make.text != "" && model.text != "" && year.text != ""
         {
             titleLabel.text = "Step \(status): Enter vehicle information"
             subtitleLabel.text = "Vehicle \(status):"
@@ -68,8 +77,6 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
             // Save data and pull any additional data, clear fields
             if trimDetails.count != 0
             {
-                // save data
-                let toBeSent = trimDetails[selectedTrimIndex]
                 vehicleOne = "\(self.year.text) \(self.make) \(self.model)"
                 
                 // clear the fields
@@ -77,6 +84,8 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
                 self.make.text = ""
                 self.model.text = ""
                 self.trimDetails = [] // would be reset anyway
+                self.trims = []
+                self.tableView.reloadData()
                 
                 // Hide buttons
                 nextButton.isHidden = true
@@ -84,12 +93,26 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
                 
             }
         }
-        else
+        else if status > 2
         {
-            // Segue (Send two strings of vehicle data as well as year make and model)
-            // Add code to send data to VC
-            performSegue(withIdentifier: "compare", sender: nil)
+            self.performSegue(withIdentifier: "compare", sender: self)
         }
+    }
+    
+    func parseData(data: Dictionary<String, Any>)
+    {
+        if status == 1
+        {
+            idOne = ids[selectedTrimIndex]
+            nameOne = year.text! + make.text! + model.text! + trims[selectedTrimIndex]
+        }
+        else if status == 2
+        {
+            idTwo = ids[selectedTrimIndex]
+            nameTwo = year.text! + make.text! + model.text! + trims[selectedTrimIndex]
+        }
+        
+        
     }
     
     func getJSONData(path: String)
@@ -116,6 +139,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
                         {
                             let name = styles[i] as! Dictionary<String, Any>
                             self.trims.append(name["name"] as! String)
+                            self.ids.append(name["id"] as! CLong)
                         }
                         DispatchQueue.main.async() { // Async task to handle UI updating
                             self.tableView.reloadData()
@@ -135,7 +159,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true;
+        return true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -172,15 +196,29 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
         // Dispose of any resources that can be recreated.
     }
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
+        
+        if self.tableView.indexPathForSelectedRow != nil
+        {
+            if segue.identifier == "compare"
+            {
+                let next = segue.destination as! DetailsVC
+                //let next = self.storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
+                next.key = "mbaawxhjajwzsqs7pgxnbefj"
+                next.idOne = self.idOne
+                next.idTwo = self.idTwo
+                next.nameOne = self.nameOne
+                next.nameTwo = self.nameTwo
+            }
+        }
      }
-     */
+    
     
     
     

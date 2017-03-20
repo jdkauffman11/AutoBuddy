@@ -24,12 +24,14 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
     private var status = 1 // used to keep track of current status
     private var trimDetails: NSArray = [] // holds the values of all trims. when one is selected, the relevant info is passed
     private var selectedTrimIndex = 0 // index of the trim selected
-    private var vehicleOne: String!
+    private var vehicleOne = ""
     
-    private var nameOne: String!
-    private var nameTwo: String!
-    private var idOne: CLong!
-    private var idTwo: CLong!
+    private var nameOne = ""
+    private var nameTwo = ""
+    private var idOne = 0
+    private var idTwo = 0
+    private var trimOne = ""
+    private var trimTwo = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,12 +106,14 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
         if status == 1
         {
             idOne = ids[selectedTrimIndex]
-            nameOne = year.text! + make.text! + model.text! + trims[selectedTrimIndex]
+            nameOne = year.text! + " " + make.text! + " " + model.text!
+            trimOne = trims[selectedTrimIndex]
         }
         else if status == 2
         {
             idTwo = ids[selectedTrimIndex]
-            nameTwo = year.text! + make.text! + model.text! + trims[selectedTrimIndex]
+            nameTwo = year.text! + " " + make.text! + " " + model.text!
+            trimTwo = trims[selectedTrimIndex]
         }
         
         
@@ -215,6 +219,8 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
                 next.idTwo = self.idTwo
                 next.nameOne = self.nameOne
                 next.nameTwo = self.nameTwo
+                next.trimOne = self.trimOne
+                next.trimTwo = self.trimTwo
             }
         }
      }

@@ -11,24 +11,27 @@ import UIKit
 class DetailsVC: UIViewController {
     
     
-    var nameOne: String!
-    var nameTwo: String!
+    var nameOne = ""
+    var nameTwo = ""
     var idOne: CLong!
     var idTwo: CLong!
-    var key: String!
+    var trimOne = ""
+    var trimTwo = ""
+    var key = ""
+    
+    var carToPass: String!
     
     @IBOutlet var vehicleOneTitleButton: UIButton!
     @IBOutlet var vehicleTwoTitleButton: UIButton!
     @IBOutlet var findDealerships: UIButton!
 
     override func viewWillAppear(_ animated: Bool) {
-        vehicleOneTitleButton.titleLabel?.text = nameOne
-        vehicleTwoTitleButton.titleLabel?.text = nameTwo
+        vehicleOneTitleButton.setTitle(nameOne, for: .normal)
+        vehicleTwoTitleButton.setTitle(nameTwo, for: .normal)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         // Do any additional setup after loading the view.
     }
@@ -42,14 +45,31 @@ class DetailsVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
-    /*
+    @IBAction func searchVehicleOne(_ sender: Any) {
+        carToPass = nameOne
+        self.performSegue(withIdentifier: "webSegue", sender: self)
+    }
+    
+    @IBAction func searchVehicleTwo(_ sender: Any) {
+        carToPass = nameTwo
+        self.performSegue(withIdentifier: "webSegue", sender: self)
+    }
+
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "webSegue"
+        {
+            let next = segue.destination as! WebVC
+            next.car = self.carToPass
+        }
     }
-    */
+    
 
 }

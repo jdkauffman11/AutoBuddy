@@ -23,17 +23,74 @@ class DetailsVC: UIViewController {
     
     @IBOutlet var vehicleOneTitleButton: UIButton!
     @IBOutlet var vehicleTwoTitleButton: UIButton!
+    
     @IBOutlet var findDealerships: UIButton!
 
     override func viewWillAppear(_ animated: Bool) {
         vehicleOneTitleButton.setTitle(nameOne, for: .normal)
         vehicleTwoTitleButton.setTitle(nameTwo, for: .normal)
+        
+        print(idOne)
+        print(idTwo) 
+        
+        getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/equipment/\(idOne)?fmt=json&api_key=\(key)")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func getJSONData(path: String)
+    {
+        let config = URLSessionConfiguration.default // Session Configuration
+        let session = URLSession(configuration: config) // Load configuration into Session
+        let url = URL(string: path)!
+        let task = session.dataTask(with: url, completionHandler:
+            {(data, response, error) in
+                if error != nil
+                {
+                    print("Session Error: \(error?.localizedDescription)")
+                }
+                else
+                {
+                    do
+                    {
+                        let resultJSON = try JSONSerialization.jsonObject(with: data!) as! [String: Any]
+                        // Parse the data in the result
+                        if resultJSON["styles"] as? NSArray == nil
+                        {
+                            print("Incorrect Data Submitted")
+                        }
+                        else
+                        {
+                            
+                            print(resultJSON)
+//                            let styles = resultJSON["styles"] as! NSArray
+//                            self.trimDetails = styles
+//                            for i in 0..<styles.count
+//                            {
+//                                let name = styles[i] as! Dictionary<String, Any>
+//                                self.trims.append(name["name"] as! String)
+//                                self.ids.append(name["id"] as! CLong)
+//                            }
+//                            
+//                            DispatchQueue.main.async() { // Async task to handle UI updating
+//                                self.tableView.reloadData()
+//                                self.tableView.isHidden = false
+//                                return
+//                            }
+                        }
+                    }
+                    catch
+                    {
+                        print("Serialization Error: \(error)")
+                    }
+                }
+        })
+        task.resume()
+        
     }
 
     @IBAction func SearchDealerships(_ sender: Any)

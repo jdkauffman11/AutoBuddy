@@ -32,6 +32,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
     private var idTwo = 0
     private var trimOne = ""
     private var trimTwo = ""
+    private var key = "mbaawxhjajwzsqs7pgxnbefj"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,8 +63,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
         trims = []
         if make.text != "" && model.text != "" && year.text != ""
         {
-            getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/" + make.text! + "/" + model.text! + "/" + year.text! + "?fmt=json&api_key=")
-            self.nextButton.isHidden = false
+            getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/" + make.text! + "/" + model.text! + "/" + year.text! + "?fmt=json&api_key=\(key)")
         }
     }
     
@@ -88,7 +88,9 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
                 self.model.text = ""
                 self.trimDetails = [] // would be reset anyway
                 self.trims = []
+                self.ids = []
                 self.tableView.reloadData()
+                self.tableView.isHidden = true
                 
                 // Hide buttons
                 nextButton.isHidden = true
@@ -124,7 +126,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
     {
         let config = URLSessionConfiguration.default // Session Configuration
         let session = URLSession(configuration: config) // Load configuration into Session
-        let url = URL(string: path + "mbaawxhjajwzsqs7pgxnbefj")!
+        let url = URL(string: path)!
         let task = session.dataTask(with: url, completionHandler:
             {(data, response, error) in
                 if error != nil
@@ -155,6 +157,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
                             DispatchQueue.main.async() { // Async task to handle UI updating
                                 self.tableView.reloadData()
                                 self.tableView.isHidden = false
+                                self.nextButton.isHidden = false
                                 return
                             }
                         }
@@ -222,7 +225,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
             {
                 let next = segue.destination as! DetailsVC
                 //let next = self.storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
-                next.key = "mbaawxhjajwzsqs7pgxnbefj"
+                next.key = self.key
                 next.idOne = self.idOne
                 next.idTwo = self.idTwo
                 next.nameOne = self.nameOne

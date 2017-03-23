@@ -76,7 +76,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
         {
             titleLabel.text = "Step \(status): Enter vehicle information"
             subtitleLabel.text = "Vehicle \(status):"
-//CHECK THIS CONDITION
+            //CHECK THIS CONDITION
             // Save data and pull any additional data, clear fields
             if trimDetails.count != 0
             {
@@ -125,35 +125,43 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
         let config = URLSessionConfiguration.default // Session Configuration
         let session = URLSession(configuration: config) // Load configuration into Session
         let url = URL(string: path + "mbaawxhjajwzsqs7pgxnbefj")!
-        
         let task = session.dataTask(with: url, completionHandler:
             {(data, response, error) in
                 if error != nil
                 {
-                    print(error!.localizedDescription)
+                    print("Session Error: \(error?.localizedDescription)")
                 }
                 else
                 {
-                    do {
+                    do
+                    {
                         let resultJSON = try JSONSerialization.jsonObject(with: data!) as! [String: Any]
                         // Parse the data in the result
-                        let styles = resultJSON["styles"] as! NSArray
-                        self.trimDetails = styles
-                        for i in 0..<styles.count
+                        if resultJSON["styles"] as? NSArray == nil
                         {
-                            let name = styles[i] as! Dictionary<String, Any>
-                            self.trims.append(name["name"] as! String)
-                            self.ids.append(name["id"] as! CLong)
+                            print("Incorrect Data Submitted")
                         }
-                        DispatchQueue.main.async() { // Async task to handle UI updating
-                            self.tableView.reloadData()
-                            self.tableView.isHidden = false
-                            return
+                        else
+                        {
+                            let styles = resultJSON["styles"] as! NSArray
+                            self.trimDetails = styles
+                            for i in 0..<styles.count
+                            {
+                                let name = styles[i] as! Dictionary<String, Any>
+                                self.trims.append(name["name"] as! String)
+                                self.ids.append(name["id"] as! CLong)
+                            }
+                            
+                            DispatchQueue.main.async() { // Async task to handle UI updating
+                                self.tableView.reloadData()
+                                self.tableView.isHidden = false
+                                return
+                            }
                         }
                     }
                     catch
                     {
-                        print("Error: \(error)")
+                        print("Serialization Error: \(error)")
                     }
                 }
         })
@@ -201,12 +209,12 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
     }
     
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
         
         if self.tableView.indexPathForSelectedRow != nil
         {
@@ -223,7 +231,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
                 next.trimTwo = self.trimTwo
             }
         }
-     }
+    }
     
     
     

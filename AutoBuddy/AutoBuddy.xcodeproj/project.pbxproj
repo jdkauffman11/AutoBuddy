@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290479AC1E82DAFA006D3A18 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290479AB1E82DAFA006D3A18 /* MapKit.framework */; };
 		290529521E7E3E3E00362303 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290529511E7E3E3E00362303 /* DetailsVC.swift */; };
+		29225A471E81D6AC00131316 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29225A461E81D6AC00131316 /* MapVC.swift */; };
 		2923A20A1E80389000D27849 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923A2091E80389000D27849 /* WebVC.swift */; };
 		293AA8151E46B73C005FD069 /* road.png in Resources */ = {isa = PBXBuildFile; fileRef = 293AA8141E46B73C005FD069 /* road.png */; };
 		2970BAE11E652C8F00092158 /* CompareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2970BAE01E652C8F00092158 /* CompareVC.swift */; };
@@ -22,7 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		290479AB1E82DAFA006D3A18 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		290529511E7E3E3E00362303 /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		29225A461E81D6AC00131316 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		2923A2091E80389000D27849 /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		293AA8141E46B73C005FD069 /* road.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road.png; path = Assets.xcassets/road.png; sourceTree = "<group>"; };
 		2970BAE01E652C8F00092158 /* CompareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareVC.swift; sourceTree = "<group>"; };
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290479AC1E82DAFA006D3A18 /* MapKit.framework in Frameworks */,
 				CFDEE945490EDC0A5029A693 /* Pods_AutoBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +60,7 @@
 		1D0BDB2A77A98DBA9179D520 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				290479AB1E82DAFA006D3A18 /* MapKit.framework */,
 				F4905EB247E4A3907C3BECA7 /* Pods_AutoBuddy.framework */,
 			);
 			name = Frameworks;
@@ -86,6 +92,7 @@
 				2970BAE01E652C8F00092158 /* CompareVC.swift */,
 				290529511E7E3E3E00362303 /* DetailsVC.swift */,
 				29A9566C1E303CA700AAAD08 /* Main.storyboard */,
+				29225A461E81D6AC00131316 /* MapVC.swift */,
 				29A9566F1E303CA700AAAD08 /* Assets.xcassets */,
 				29F4F7FC1E6255CB0034E885 /* rs5_80.png */,
 				293AA8141E46B73C005FD069 /* road.png */,
@@ -143,6 +150,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XC29ANQV89;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -234,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A9566B1E303CA700AAAD08 /* LoginVC.swift in Sources */,
+				29225A471E81D6AC00131316 /* MapVC.swift in Sources */,
 				290529521E7E3E3E00362303 /* DetailsVC.swift in Sources */,
 				2923A20A1E80389000D27849 /* WebVC.swift in Sources */,
 				2970BAE11E652C8F00092158 /* CompareVC.swift in Sources */,

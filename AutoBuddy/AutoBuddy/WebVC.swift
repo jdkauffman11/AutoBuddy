@@ -9,21 +9,35 @@
 import UIKit
 
 class WebVC: UIViewController {
+    
+    @IBOutlet var navBar: UINavigationBar!
+    @IBOutlet var navItem: UINavigationItem!
     @IBOutlet var webView: UIWebView!
+    @IBOutlet var navigationBar: UINavigationBar!
     var car = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //webView.loadRequest(URLRequest(url: URL(fileURLWithPath: "https://www.google.com/search?q=" + car + "for sale")))
-        
-        webView.loadRequest(URLRequest(url: URL(string: "https://www.google.com/search?q=" + car + "for sale")!))
-        // Do any additional setup after loading the view.
-        
-//        let url = URL(string: "https://www.google.com/search?q=" + car + "for sale");
-//        let req = URLRequest(url: url! as URL);
-//        webView.loadRequest(req as URLRequest);
+        navBar.backgroundColor = UIColor.white
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "< Back", style: .plain, target: self, action: #selector(backAction))
+        if car.contains(" ")
+        {
+            car = car.replacingOccurrences(of: " ", with: "%20")
+        }
+        if let url = URL(string: "https://www.google.com/search?q=\(car)%20for%20sale")
+        {
+            let request = URLRequest(url: url)
+            webView.loadRequest(request)
+        }
     }
     
+    func backAction()
+    {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    }
     
 
     override func didReceiveMemoryWarning() {

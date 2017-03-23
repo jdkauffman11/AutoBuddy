@@ -59,6 +59,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
     
     @IBAction func loadTrims(_ sender: Any) {
         dismissKeyboard()
+        trims = []
         if make.text != "" && model.text != "" && year.text != ""
         {
             getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/" + make.text! + "/" + model.text! + "/" + year.text! + "?fmt=json&api_key=")
@@ -126,8 +127,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
         let url = URL(string: path + "mbaawxhjajwzsqs7pgxnbefj")!
         
         let task = session.dataTask(with: url, completionHandler:
-            {
-                (data, response, error) in
+            {(data, response, error) in
                 if error != nil
                 {
                     print(error!.localizedDescription)

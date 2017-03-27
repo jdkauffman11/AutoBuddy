@@ -18,7 +18,13 @@
 		29A9566E1E303CA700AAAD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A9566C1E303CA700AAAD08 /* Main.storyboard */; };
 		29A956701E303CA700AAAD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A9566F1E303CA700AAAD08 /* Assets.xcassets */; };
 		29A956731E303CA700AAAD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A956711E303CA700AAAD08 /* LaunchScreen.storyboard */; };
-		29F4F7FD1E6255CB0034E885 /* rs5_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 29F4F7FC1E6255CB0034E885 /* rs5_80.png */; };
+		29C38A811E84C4D000BEA22D /* rs5_40_pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C38A7D1E84C4D000BEA22D /* rs5_40_pt.png */; };
+		29C38A841E84C5BD00BEA22D /* rs5_60_pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C38A831E84C5BD00BEA22D /* rs5_60_pt.png */; };
+		29C38A871E84C69800BEA22D /* rs5_120_pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C38A851E84C69800BEA22D /* rs5_120_pt.png */; };
+		29C38A881E84C69800BEA22D /* rs5_180_pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C38A861E84C69800BEA22D /* rs5_180_pt.png */; };
+		29C38A8A1E84C6E800BEA22D /* rs5_80_pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C38A891E84C6E800BEA22D /* rs5_80_pt.png */; };
+		29C38A8D1E84C77600BEA22D /* rs5_58_pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C38A8B1E84C77600BEA22D /* rs5_58_pt.png */; };
+		29C38A8E1E84C77600BEA22D /* rs5_87_pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C38A8C1E84C77600BEA22D /* rs5_87_pt.png */; };
 		29F7BE751E61235C005B3963 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29F7BE741E61235C005B3963 /* GoogleService-Info.plist */; };
 		CFDEE945490EDC0A5029A693 /* Pods_AutoBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4905EB247E4A3907C3BECA7 /* Pods_AutoBuddy.framework */; };
 /* End PBXBuildFile section */
@@ -37,7 +43,13 @@
 		29A9566F1E303CA700AAAD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29A956721E303CA700AAAD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29A956741E303CA700AAAD08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29F4F7FC1E6255CB0034E885 /* rs5_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rs5_80.png; path = Assets.xcassets/rs5_80.png; sourceTree = "<group>"; };
+		29C38A7D1E84C4D000BEA22D /* rs5_40_pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rs5_40_pt.png; path = Assets.xcassets/rs5_40_pt.png; sourceTree = "<group>"; };
+		29C38A831E84C5BD00BEA22D /* rs5_60_pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rs5_60_pt.png; path = Assets.xcassets/rs5_60_pt.png; sourceTree = "<group>"; };
+		29C38A851E84C69800BEA22D /* rs5_120_pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rs5_120_pt.png; path = Assets.xcassets/rs5_120_pt.png; sourceTree = "<group>"; };
+		29C38A861E84C69800BEA22D /* rs5_180_pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rs5_180_pt.png; path = Assets.xcassets/rs5_180_pt.png; sourceTree = "<group>"; };
+		29C38A891E84C6E800BEA22D /* rs5_80_pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rs5_80_pt.png; path = Assets.xcassets/rs5_80_pt.png; sourceTree = "<group>"; };
+		29C38A8B1E84C77600BEA22D /* rs5_58_pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rs5_58_pt.png; path = Assets.xcassets/rs5_58_pt.png; sourceTree = "<group>"; };
+		29C38A8C1E84C77600BEA22D /* rs5_87_pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rs5_87_pt.png; path = Assets.xcassets/rs5_87_pt.png; sourceTree = "<group>"; };
 		29F7BE741E61235C005B3963 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C21B46B95A5F834BB594115 /* Pods-AutoBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoBuddy/Pods-AutoBuddy.release.xcconfig"; sourceTree = "<group>"; };
 		2E7748667A45FBA5BA172FF8 /* Pods-AutoBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoBuddy/Pods-AutoBuddy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +106,13 @@
 				29A9566C1E303CA700AAAD08 /* Main.storyboard */,
 				29225A461E81D6AC00131316 /* MapVC.swift */,
 				29A9566F1E303CA700AAAD08 /* Assets.xcassets */,
-				29F4F7FC1E6255CB0034E885 /* rs5_80.png */,
+				29C38A7D1E84C4D000BEA22D /* rs5_40_pt.png */,
+				29C38A8B1E84C77600BEA22D /* rs5_58_pt.png */,
+				29C38A831E84C5BD00BEA22D /* rs5_60_pt.png */,
+				29C38A891E84C6E800BEA22D /* rs5_80_pt.png */,
+				29C38A8C1E84C77600BEA22D /* rs5_87_pt.png */,
+				29C38A851E84C69800BEA22D /* rs5_120_pt.png */,
+				29C38A861E84C69800BEA22D /* rs5_180_pt.png */,
 				293AA8141E46B73C005FD069 /* road.png */,
 				29A956711E303CA700AAAD08 /* LaunchScreen.storyboard */,
 				29A956741E303CA700AAAD08 /* Info.plist */,
@@ -181,12 +199,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29F4F7FD1E6255CB0034E885 /* rs5_80.png in Resources */,
+				29C38A871E84C69800BEA22D /* rs5_120_pt.png in Resources */,
+				29C38A881E84C69800BEA22D /* rs5_180_pt.png in Resources */,
+				29C38A8D1E84C77600BEA22D /* rs5_58_pt.png in Resources */,
 				29A956731E303CA700AAAD08 /* LaunchScreen.storyboard in Resources */,
+				29C38A811E84C4D000BEA22D /* rs5_40_pt.png in Resources */,
 				293AA8151E46B73C005FD069 /* road.png in Resources */,
 				29F7BE751E61235C005B3963 /* GoogleService-Info.plist in Resources */,
 				29A956701E303CA700AAAD08 /* Assets.xcassets in Resources */,
 				29A9566E1E303CA700AAAD08 /* Main.storyboard in Resources */,
+				29C38A8E1E84C77600BEA22D /* rs5_87_pt.png in Resources */,
+				29C38A8A1E84C6E800BEA22D /* rs5_80_pt.png in Resources */,
+				29C38A841E84C5BD00BEA22D /* rs5_60_pt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

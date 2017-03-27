@@ -20,7 +20,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
     @IBOutlet var nextButton: UIButton!
     
     private var trims = [String]() // trims that the vehicle comes in
-    private var ids = [CLong]() // trims that the vehicle comes in
+    private var ids = [CLong]() // ids for each trim
     private var status = 1 // used to keep track of current status
     private var trimDetails: NSArray = [] // holds the values of all trims. when one is selected, the relevant info is passed
     private var selectedTrimIndex = 0 // index of the trim selected
@@ -142,6 +142,9 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
                         if resultJSON["styles"] as? NSArray == nil
                         {
                             print("Incorrect Data Submitted")
+                            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
+                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
                         }
                         else
                         {
@@ -230,8 +233,8 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
                 next.idTwo = self.idTwo
                 next.nameOne = self.nameOne
                 next.nameTwo = self.nameTwo
-                next.trimOne = self.trimOne
-                next.trimTwo = self.trimTwo
+                next.firstTrim = self.trimOne
+                next.secondTrim = self.trimTwo
             }
         }
     }

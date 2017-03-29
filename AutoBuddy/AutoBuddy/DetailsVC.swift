@@ -16,7 +16,7 @@ class DetailsVC: UIViewController {
     var idOne: CLong!
     var idTwo: CLong!
     var key = ""
-    var vehicle: Int!
+    var vehicle = 1
     var firstTrim = ""
     var secondTrim = ""
     
@@ -40,25 +40,21 @@ class DetailsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         vehicleOneTitleButton.setTitle(nameOne, for: .normal)
         vehicleTwoTitleButton.setTitle(nameTwo, for: .normal)
-        
-        vehicle = 1
-        //getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/equipment/\(idOne!)?fmt=json&api_key=\(key)")
-        getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(idOne!)/equipment?fmt=json&api_key=\(key)")
-        vehicle = 2
-        //getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(idTwo!)/equipment?fmt=json&api_key=\(key)")
+        self.trimOne.text = "Trim: \(firstTrim)"
+        self.trimTwo.text = "Trim: \(secondTrim)"
         
     }
     
     override func viewDidLoad() {
         
-        self.trimOne.text = "Trim: \(firstTrim)"
-        self.trimTwo.text = "Trim: \(secondTrim)"
-        print(idOne)
-        print(idTwo)
-        
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        populateFields()
+    }
+    
+    func populateFields()
+    {
+        getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(idOne!)/equipment?fmt=json&api_key=\(key)")
     }
     
     func getJSONData(path: String)
@@ -84,36 +80,109 @@ class DetailsVC: UIViewController {
                         }
                         else
                         {
-                            print("else")
                             let equipment = resultJSON["equipment"] as! NSArray
                             
                             for i in 0 ..< equipment.count
                             {
-                                print("for")
                                 let type = equipment[i] as! Dictionary<String, Any>
                                 if let name = type["name"] as? String
                                 {
                                     if name == "Engine"
                                     {
-                                        print(type)
-                                        let cylinder = type["cylinder"] as? Int
-                                        print(1)
-                                        let size = type["size"] as? Int
-                                        print(2)
-                                        let valves = type["totalValves"] as? Int
-                                        print(3)
-                                        let horsepower = type["horsepower"] as? Int
-                                        print(4)
-                                        let torque = type["torque"] as? Int
-                                        print(5)
-                                        let configuration = type["configuration"] as? String
+                                        if let equipmentType = type["equipmentType"]
+                                        {
+                                            if (equipmentType as AnyObject).contains("ENGINE")
+                                            {
+                                                print("Equipment Type: \(equipmentType)")
+                                                print(type)
+                                                
+                                                let cylinder = type["cylinder"]
+                                                let size = type["size"]
+                                                let valves = type["totalValves"]
+                                                let horsepower = type["horsepower"]
+                                                let torque = type["torque"]
+                                                let configuration = type["configuration"]
+                                                if self.vehicle == 1
+                                                {
+                                                    DispatchQueue.main.async() {
+                                                        if horsepower != nil
+                                                        {
+                                                            print("Should set Horsepower")
+                                                            self.horsepowerOne.text = "Horsepower: \(horsepower!)"
+                                                        }
+                                                        
+                                                        if torque != nil
+                                                        {
+                                                            self.torqueOne.text = "Torque: \(torque!)"
+                                                        }
+                                                        
+                                                        if valves != nil && size != nil && configuration != nil && cylinder != nil
+                                                        {
+                                                            self.engineOne.text = "Engine: \(valves!) Valve \(size!)L. \(configuration!)\(cylinder!)"
+                                                            //self.engineOne.text = "Engine: \(Int(valves as! Int)) Valve \(Int(size as! Int))L. \(configuration!)\(Int(cylinder as! Int))"
+                                                        }
+                                                        
+                                                        
+                                                    }
+                                                }
+                                                
+                                            }
+                                        }
+                                        print("done with engine")
+                                    }
+                                    else if name == "Doors"
+                                    {
+                                        print("Looking for doors")
+                                        let attributes = type["attributes"] as! NSArray
+                                        print("Check value conditional")
+                                        let doors = attributes[0] as! Dictionary <String, Any>
+                                        print(doors)
+                                        if let value = doors["value"]
+                                        {
+                                            print("Value check passed")
+                                            if self.vehicle == 1
+                                            {
+                                                DispatchQueue.main.async() {
+                                                    print("Doors label set")
+                                                    self.doorsOne.text = "Doors: \(value)"
+                                                    
+                                                }
+                                            }
+                                        }
+                                        print("Done with doors")
+                                    }
+                                    else if name == "Specifications"
+                                    {
+                                        print("Looking for mpg")
+                                        var city: Any?
+                                        var highway: Any?
+                                        let attributes = type["attributes"] as! NSArray
+                                        print(attributes)
+                                        for i in 0 ..< attributes.count
+                                        {
+                                            print("Attributes loaded correctly")
+                                            let mpg = attributes[i] as! Dictionary <String, Any>
+                                            
+                                            if mpg["name"] as! String == "Epa City Mpg"
+                                            {
+                                                print("found city")
+                                                city = mpg["value"]
+                                            }
+                                            else if mpg["name"] as! String == "Epa Highway Mpg"
+                                            {
+                                                print("found highway")
+                                                highway = mpg["value"]
+                                            }
+                                        }
                                         if self.vehicle == 1
                                         {
-                                            print("second if")
-                                            self.horsepowerOne.text = "\(horsepower)"
-                                            self.torqueOne.text = "\(torque)"
-                                            self.engineOne.text = "\(valves) Valve \(size)L. \(configuration)\(cylinder)"
+                                            DispatchQueue.main.async() {
+                                                print("mpg label set")
+                                                self.mpgOne.text = "MPG: City/Highway \(city!) / \(highway!)"
+                                                
+                                            }
                                         }
+                                        print("Done with mpg")
                                     }
                                 }
                             }
@@ -127,6 +196,8 @@ class DetailsVC: UIViewController {
                 }
         })
         task.resume()
+        
+        print("done")
         
     }
     

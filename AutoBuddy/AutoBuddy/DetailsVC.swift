@@ -16,7 +16,6 @@ class DetailsVC: UIViewController {
     var idOne: CLong!
     var idTwo: CLong!
     var key = ""
-    var vehicle = 1
     var firstTrim = ""
     var secondTrim = ""
     
@@ -55,16 +54,21 @@ class DetailsVC: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+       
+        DispatchQueue.main.async {
+            self.getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(self.idOne!)/equipment?fmt=json&api_key=\(self.key)", vehicle: 1)
+         
+        }
         
-        populateFields()
+        DispatchQueue.main.async {
+            
+            self.getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(self.idTwo!)/equipment?fmt=json&api_key=\(self.key)", vehicle: 2)
+        }
+        
+        
     }
     
-    func populateFields()
-    {
-        getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(idOne!)/equipment?fmt=json&api_key=\(key)")
-    }
-    
-    func getJSONData(path: String)
+    func getJSONData(path: String, vehicle: Int)
     {
         let config = URLSessionConfiguration.default // Session Configuration
         let session = URLSession(configuration: config) // Load configuration into Session
@@ -106,7 +110,7 @@ class DetailsVC: UIViewController {
                                                 let horsepower = type["horsepower"]
                                                 let torque = type["torque"]
                                                 let configuration = type["configuration"]
-                                                if self.vehicle == 1
+                                                if vehicle == 1
                                                 {
                                                     DispatchQueue.main.async() {
                                                         if horsepower != nil
@@ -154,8 +158,6 @@ class DetailsVC: UIViewController {
                                                 
                                             }
                                         }
-                                        self.vehicle = 2
-                                        self.populateFields()
                                     }
                                     else if name == "Doors"
                                     {
@@ -163,7 +165,7 @@ class DetailsVC: UIViewController {
                                         let doors = attributes[0] as! Dictionary <String, Any>
                                         if let value = doors["value"]
                                         {
-                                            if self.vehicle == 1
+                                            if vehicle == 1
                                             {
                                                 DispatchQueue.main.async() {
                                                     self.doorsOne.text = "Doors: \(value)"
@@ -202,7 +204,7 @@ class DetailsVC: UIViewController {
                                                 weight = mpg["value"]
                                             }
                                         }
-                                        if self.vehicle == 1
+                                        if vehicle == 1
                                         {
                                             DispatchQueue.main.async() {
                                                 self.mpgOne.text = "MPG: City/Highway \(city!) / \(highway!)"

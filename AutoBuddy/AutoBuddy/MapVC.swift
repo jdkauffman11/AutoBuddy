@@ -63,8 +63,6 @@ class MapVC: UIViewController, CLLocationManagerDelegate {
             }
             else
             {
-                print("Matches found")
-                
                 for item in response!.mapItems {
                     
                     let annotation = MKPointAnnotation()

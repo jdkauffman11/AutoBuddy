@@ -292,11 +292,6 @@ class DetailsVC: UIViewController {
             let next = segue.destination as! WebVC
             next.car = self.carToPass
         }
-        if segue.identifier == "savedSearches"
-        {
-            let next = segue.destination as! SavedSearchesTableViewController
-            next.email = email
-        }
     }
     
     

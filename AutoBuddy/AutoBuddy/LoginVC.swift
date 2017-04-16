@@ -200,11 +200,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "successfulLogin"
-        {
-            let next = segue.destination as! CompareVC
-            next.email = self.email
-        }
+        let tabCtrl = segue.destination as! UITabBarController
+        let next = tabCtrl.viewControllers![0] as! CompareVC
+        next.email = self.email
     }
 }
 

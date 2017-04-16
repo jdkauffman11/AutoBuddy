@@ -12,7 +12,7 @@ import Firebase
 class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var emailBox: UITextField!
     @IBOutlet var passwordBox: UITextField!
-    
+    var email: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,7 +108,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 }
                 else
                 {
+                    let ref = FIRDatabase.database().reference()
+                    let userID = FIRAuth.auth()?.currentUser?.uid
+                    ref.child("users").child((userID)!).setValue(["username": "\(self.emailBox.text!)", "searches": "Empty"])
+                    
+                    self.email = self.emailBox.text
                     self.performSegue(withIdentifier: "successfulLogin", sender: nil)
+                    
                 }
                 
         })
@@ -185,11 +191,20 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             }
             else
             {
+                self.email = self.emailBox.text
                 self.performSegue(withIdentifier: "successfulLogin", sender: nil)
             }
             
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "successfulLogin"
+        {
+            let next = segue.destination as! CompareVC
+            next.email = self.email
+        }
     }
 }
 

@@ -38,6 +38,16 @@
                ReferencedContainer = "container:AutoBuddy.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "29A4FD771E9C6EF20021A071"
+               BuildableName = "AutoBuddyTests.xctest"
+               BlueprintName = "AutoBuddyTests"
+               ReferencedContainer = "container:AutoBuddy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

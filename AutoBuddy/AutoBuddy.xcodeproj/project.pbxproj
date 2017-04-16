@@ -13,7 +13,9 @@
 		2923A20A1E80389000D27849 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923A2091E80389000D27849 /* WebVC.swift */; };
 		293AA8151E46B73C005FD069 /* road.png in Resources */ = {isa = PBXBuildFile; fileRef = 293AA8141E46B73C005FD069 /* road.png */; };
 		2970BAE11E652C8F00092158 /* CompareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2970BAE01E652C8F00092158 /* CompareVC.swift */; };
+		2998CB921EA1A0D800947CEF /* SavedSearchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2998CB911EA1A0D800947CEF /* SavedSearchesTableViewController.swift */; };
 		29A4FD6D1E9C21650021A071 /* AutoBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4FD6C1E9C21650021A071 /* AutoBuddyUITests.swift */; };
+		29A4FD7B1E9C6EF30021A071 /* AutoBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4FD7A1E9C6EF30021A071 /* AutoBuddyTests.swift */; };
 		29A956691E303CA700AAAD08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A956681E303CA700AAAD08 /* AppDelegate.swift */; };
 		29A9566B1E303CA700AAAD08 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A9566A1E303CA700AAAD08 /* LoginVC.swift */; };
 		29A9566E1E303CA700AAAD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A9566C1E303CA700AAAD08 /* Main.storyboard */; };
@@ -27,11 +29,19 @@
 		29C38A8D1E84C77600BEA22D /* rs5_58_pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C38A8B1E84C77600BEA22D /* rs5_58_pt.png */; };
 		29C38A8E1E84C77600BEA22D /* rs5_87_pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C38A8C1E84C77600BEA22D /* rs5_87_pt.png */; };
 		29F7BE751E61235C005B3963 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29F7BE741E61235C005B3963 /* GoogleService-Info.plist */; };
+		CC76BFF25013378189C80942 /* Pods_AutoBuddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AB0F912347AFCA41E151F4 /* Pods_AutoBuddyTests.framework */; };
 		CFDEE945490EDC0A5029A693 /* Pods_AutoBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4905EB247E4A3907C3BECA7 /* Pods_AutoBuddy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		29A4FD6F1E9C21650021A071 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29A9565D1E303CA700AAAD08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29A956641E303CA700AAAD08;
+			remoteInfo = AutoBuddy;
+		};
+		29A4FD7D1E9C6EF30021A071 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29A9565D1E303CA700AAAD08 /* Project object */;
 			proxyType = 1;
@@ -47,9 +57,13 @@
 		2923A2091E80389000D27849 /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		293AA8141E46B73C005FD069 /* road.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road.png; path = Assets.xcassets/road.png; sourceTree = "<group>"; };
 		2970BAE01E652C8F00092158 /* CompareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareVC.swift; sourceTree = "<group>"; };
+		2998CB911EA1A0D800947CEF /* SavedSearchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedSearchesTableViewController.swift; sourceTree = "<group>"; };
 		29A4FD6A1E9C21650021A071 /* AutoBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A4FD6C1E9C21650021A071 /* AutoBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoBuddyUITests.swift; sourceTree = "<group>"; };
 		29A4FD6E1E9C21650021A071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29A4FD781E9C6EF20021A071 /* AutoBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A4FD7A1E9C6EF30021A071 /* AutoBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoBuddyTests.swift; sourceTree = "<group>"; };
+		29A4FD7C1E9C6EF30021A071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29A956651E303CA700AAAD08 /* AutoBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A956681E303CA700AAAD08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A9566A1E303CA700AAAD08 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -67,6 +81,9 @@
 		29F7BE741E61235C005B3963 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C21B46B95A5F834BB594115 /* Pods-AutoBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoBuddy/Pods-AutoBuddy.release.xcconfig"; sourceTree = "<group>"; };
 		2E7748667A45FBA5BA172FF8 /* Pods-AutoBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoBuddy/Pods-AutoBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		3140874A7544830A0AF6CA43 /* Pods-AutoBuddyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoBuddyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoBuddyTests/Pods-AutoBuddyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		44AB0F912347AFCA41E151F4 /* Pods_AutoBuddyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoBuddyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA66CF9A6C455E7821B1ED0 /* Pods-AutoBuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoBuddyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoBuddyTests/Pods-AutoBuddyTests.release.xcconfig"; sourceTree = "<group>"; };
 		F4905EB247E4A3907C3BECA7 /* Pods_AutoBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +92,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A4FD751E9C6EF20021A071 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC76BFF25013378189C80942 /* Pods_AutoBuddyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +120,7 @@
 			children = (
 				290479AB1E82DAFA006D3A18 /* MapKit.framework */,
 				F4905EB247E4A3907C3BECA7 /* Pods_AutoBuddy.framework */,
+				44AB0F912347AFCA41E151F4 /* Pods_AutoBuddyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,11 +134,21 @@
 			path = AutoBuddyUITests;
 			sourceTree = "<group>";
 		};
+		29A4FD791E9C6EF20021A071 /* AutoBuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				29A4FD7A1E9C6EF30021A071 /* AutoBuddyTests.swift */,
+				29A4FD7C1E9C6EF30021A071 /* Info.plist */,
+			);
+			path = AutoBuddyTests;
+			sourceTree = "<group>";
+		};
 		29A9565C1E303CA700AAAD08 = {
 			isa = PBXGroup;
 			children = (
 				29A956671E303CA700AAAD08 /* AutoBuddy */,
 				29A4FD6B1E9C21650021A071 /* AutoBuddyUITests */,
+				29A4FD791E9C6EF20021A071 /* AutoBuddyTests */,
 				29A956661E303CA700AAAD08 /* Products */,
 				FCAB78C52554BB271DF22CE5 /* Pods */,
 				1D0BDB2A77A98DBA9179D520 /* Frameworks */,
@@ -124,6 +160,7 @@
 			children = (
 				29A956651E303CA700AAAD08 /* AutoBuddy.app */,
 				29A4FD6A1E9C21650021A071 /* AutoBuddyUITests.xctest */,
+				29A4FD781E9C6EF20021A071 /* AutoBuddyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +173,7 @@
 				2970BAE01E652C8F00092158 /* CompareVC.swift */,
 				290529511E7E3E3E00362303 /* DetailsVC.swift */,
 				29A9566C1E303CA700AAAD08 /* Main.storyboard */,
+				2998CB911EA1A0D800947CEF /* SavedSearchesTableViewController.swift */,
 				29225A461E81D6AC00131316 /* MapVC.swift */,
 				29A9566F1E303CA700AAAD08 /* Assets.xcassets */,
 				29C38A7D1E84C4D000BEA22D /* rs5_40_pt.png */,
@@ -159,6 +197,8 @@
 			children = (
 				2E7748667A45FBA5BA172FF8 /* Pods-AutoBuddy.debug.xcconfig */,
 				2C21B46B95A5F834BB594115 /* Pods-AutoBuddy.release.xcconfig */,
+				3140874A7544830A0AF6CA43 /* Pods-AutoBuddyTests.debug.xcconfig */,
+				5DA66CF9A6C455E7821B1ED0 /* Pods-AutoBuddyTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -183,6 +223,27 @@
 			productName = AutoBuddyUITests;
 			productReference = 29A4FD6A1E9C21650021A071 /* AutoBuddyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		29A4FD771E9C6EF20021A071 /* AutoBuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29A4FD7F1E9C6EF30021A071 /* Build configuration list for PBXNativeTarget "AutoBuddyTests" */;
+			buildPhases = (
+				DCEB5C3A49FF5452BE15A105 /* [CP] Check Pods Manifest.lock */,
+				29A4FD741E9C6EF20021A071 /* Sources */,
+				29A4FD751E9C6EF20021A071 /* Frameworks */,
+				29A4FD761E9C6EF20021A071 /* Resources */,
+				7C7A3870854E5E5FA0525C9A /* [CP] Embed Pods Frameworks */,
+				4E8ADF6E232CC660BC0385B6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29A4FD7E1E9C6EF30021A071 /* PBXTargetDependency */,
+			);
+			name = AutoBuddyTests;
+			productName = AutoBuddyTests;
+			productReference = 29A4FD781E9C6EF20021A071 /* AutoBuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		29A956641E303CA700AAAD08 /* AutoBuddy */ = {
 			isa = PBXNativeTarget;
@@ -219,6 +280,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 29A956641E303CA700AAAD08;
 					};
+					29A4FD771E9C6EF20021A071 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 29A956641E303CA700AAAD08;
+					};
 					29A956641E303CA700AAAD08 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XC29ANQV89;
@@ -246,12 +312,20 @@
 			targets = (
 				29A956641E303CA700AAAD08 /* AutoBuddy */,
 				29A4FD691E9C21650021A071 /* AutoBuddyUITests */,
+				29A4FD771E9C6EF20021A071 /* AutoBuddyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		29A4FD681E9C21650021A071 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A4FD761E9C6EF20021A071 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,6 +354,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4E8ADF6E232CC660BC0385B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoBuddyTests/Pods-AutoBuddyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C7A3870854E5E5FA0525C9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoBuddyTests/Pods-AutoBuddyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		817A021CAE7E50299659972A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,6 +414,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoBuddy/Pods-AutoBuddy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DCEB5C3A49FF5452BE15A105 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		E84CBB7347D9F4886B77FF32 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,6 +455,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29A4FD741E9C6EF20021A071 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A4FD7B1E9C6EF30021A071 /* AutoBuddyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29A956611E303CA700AAAD08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +470,7 @@
 				29A9566B1E303CA700AAAD08 /* LoginVC.swift in Sources */,
 				29225A471E81D6AC00131316 /* MapVC.swift in Sources */,
 				290529521E7E3E3E00362303 /* DetailsVC.swift in Sources */,
+				2998CB921EA1A0D800947CEF /* SavedSearchesTableViewController.swift in Sources */,
 				2923A20A1E80389000D27849 /* WebVC.swift in Sources */,
 				2970BAE11E652C8F00092158 /* CompareVC.swift in Sources */,
 				29A956691E303CA700AAAD08 /* AppDelegate.swift in Sources */,
@@ -356,6 +484,11 @@
 			isa = PBXTargetDependency;
 			target = 29A956641E303CA700AAAD08 /* AutoBuddy */;
 			targetProxy = 29A4FD6F1E9C21650021A071 /* PBXContainerItemProxy */;
+		};
+		29A4FD7E1E9C6EF30021A071 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29A956641E303CA700AAAD08 /* AutoBuddy */;
+			targetProxy = 29A4FD7D1E9C6EF30021A071 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -407,6 +540,52 @@
 			};
 			name = Release;
 		};
+		29A4FD801E9C6EF30021A071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3140874A7544830A0AF6CA43 /* Pods-AutoBuddyTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac-Defines-NSData+zlib\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac-f0850809\"",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = AutoBuddyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jordan-Kauffman.AutoBuddyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoBuddy.app/AutoBuddy";
+			};
+			name = Debug;
+		};
+		29A4FD811E9C6EF30021A071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DA66CF9A6C455E7821B1ED0 /* Pods-AutoBuddyTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac-Defines-NSData+zlib\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac-f0850809\"",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = AutoBuddyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jordan-Kauffman.AutoBuddyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoBuddy.app/AutoBuddy";
+			};
+			name = Release;
+		};
 		29A956751E303CA700AAAD08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -433,6 +612,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -447,7 +627,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -483,6 +665,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -491,7 +674,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -508,6 +693,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = XC29ANQV89;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac-f0850809\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseAuth/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseDatabase/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+				);
 				INFOPLIST_FILE = AutoBuddy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -526,6 +721,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = XC29ANQV89;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac-f0850809\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseAuth/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseDatabase/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+				);
 				INFOPLIST_FILE = AutoBuddy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -546,6 +751,16 @@
 				29A4FD721E9C21650021A071 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29A4FD7F1E9C6EF30021A071 /* Build configuration list for PBXNativeTarget "AutoBuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A4FD801E9C6EF30021A071 /* Debug */,
+				29A4FD811E9C6EF30021A071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29A956601E303CA700AAAD08 /* Build configuration list for PBXProject "AutoBuddy" */ = {
 			isa = XCConfigurationList;

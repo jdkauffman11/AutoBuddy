@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var year: UITextField!
@@ -26,6 +26,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
     private var selectedTrimIndex = 0 // index of the trim selected
     private var vehicleOne = ""
     
+    var email = ""
     private var nameOne = ""
     private var nameTwo = ""
     private var idOne = 0
@@ -80,7 +81,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
             // Save data and pull any additional data, clear fields
             if trimDetails.count != 0
             {
-                vehicleOne = "\(self.year.text) \(self.make) \(self.model)"
+                vehicleOne = "\(String(describing: self.year.text)) \(self.make) \(self.model)"
                 
                 // clear the fields
                 self.year.text = ""
@@ -131,7 +132,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
             {(data, response, error) in
                 if error != nil
                 {
-                    print("Session Error: \(error?.localizedDescription)")
+                    print("Session Error: \(String(describing: error?.localizedDescription))")
                 }
                 else
                 {
@@ -228,6 +229,7 @@ class CompareVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UIT
             {
                 let next = segue.destination as! DetailsVC
                 //let next = self.storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
+                next.email = email
                 next.key = self.key
                 next.idOne = self.idOne
                 next.idTwo = self.idTwo

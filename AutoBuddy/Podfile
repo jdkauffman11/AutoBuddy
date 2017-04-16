@@ -9,6 +9,10 @@ target 'AutoBuddy' do
    pod 'Firebase/Auth'
    pod 'Firebase/Core'
    pod 'Firebase/Database'
-    
+   
+   target 'AutoBuddyTests' do
+       inherit! :search_paths
+       pod 'Firebase'
+   end
 
 end

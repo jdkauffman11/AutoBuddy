@@ -7,14 +7,14 @@
 //
 
 import UIKit
-
+import Firebase
 class DetailsVC: UIViewController {
     
-    
+    var email = ""
     var nameOne = ""
     var nameTwo = ""
-    var idOne: CLong!
-    var idTwo: CLong!
+    var idOne = 0
+    var idTwo = 0
     var key = ""
     var firstTrim = ""
     var secondTrim = ""
@@ -55,15 +55,15 @@ class DetailsVC: UIViewController {
         
         super.viewDidLoad()
        
-        DispatchQueue.main.async {
-            self.getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(self.idOne!)/equipment?fmt=json&api_key=\(self.key)", vehicle: 1)
-         
-        }
-        
-        DispatchQueue.main.async {
-            
-            self.getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(self.idTwo!)/equipment?fmt=json&api_key=\(self.key)", vehicle: 2)
-        }
+//        DispatchQueue.main.async {
+//            self.getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(self.idOne!)/equipment?fmt=json&api_key=\(self.key)", vehicle: 1)
+//         
+//        }
+//        
+//        DispatchQueue.main.async {
+//            
+//            self.getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(self.idTwo!)/equipment?fmt=json&api_key=\(self.key)", vehicle: 2)
+//        }
         
         
     }
@@ -77,7 +77,7 @@ class DetailsVC: UIViewController {
             {(data, response, error) in
                 if error != nil
                 {
-                    print("Session Error: \(error?.localizedDescription)")
+                    print("Session Error: \(error?.localizedDescription ?? "")")
                 }
                 else
                 {
@@ -259,6 +259,25 @@ class DetailsVC: UIViewController {
         self.performSegue(withIdentifier: "webSegue", sender: self)
     }
     
+    @IBAction func saveSearch(_ sender: Any) {
+        
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date) % 12
+        let minutes = calendar.component(.minute, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        let year = calendar.component(.year, from: date)
+        
+        let ref = FIRDatabase.database().reference()
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        
+        //ref.child("users/\(userID!)/").setValue(["searches": "#"])
+        
+        let searchName = nameOne + " / " + nameTwo
+        ref.child("users/\(userID!)/searches").child("\(month)-\(day)-\(year), \(hour):\(minutes)").setValue(searchName)
+    
+    }
     
     
     // MARK: - Navigation
@@ -272,6 +291,11 @@ class DetailsVC: UIViewController {
         {
             let next = segue.destination as! WebVC
             next.car = self.carToPass
+        }
+        if segue.identifier == "savedSearches"
+        {
+            let next = segue.destination as! SavedSearchesTableViewController
+            next.email = email
         }
     }
     

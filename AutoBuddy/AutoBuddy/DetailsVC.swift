@@ -265,6 +265,7 @@ class DetailsVC: UIViewController {
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date) % 12
         let minutes = calendar.component(.minute, from: date)
+        let seconds = calendar.component(.second, from: date)
         let month = calendar.component(.month, from: date)
         let day = calendar.component(.day, from: date)
         let year = calendar.component(.year, from: date)
@@ -275,7 +276,7 @@ class DetailsVC: UIViewController {
         //ref.child("users/\(userID!)/").setValue(["searches": "#"])
         
         let searchName = nameOne + " / " + nameTwo
-        ref.child("users/\(userID!)/searches").child("\(month)-\(day)-\(year), \(hour):\(minutes)").setValue(searchName)
+        ref.child("users/\(userID!)/searches").child("\(month)-\(day)-\(year), \(hour):\(minutes):\(seconds)").setValue(searchName)
     
     }
     

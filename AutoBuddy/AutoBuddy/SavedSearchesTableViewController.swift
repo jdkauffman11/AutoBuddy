@@ -9,8 +9,12 @@
 import UIKit
 import Firebase
 class SavedSearchesTableViewController: UITableViewController {
+    //@IBOutlet var tableView: UITableView!
 
     var email = ""
+    
+    var searchHistory = [String]()
+    var dates = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +28,27 @@ class SavedSearchesTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
         let userID = FIRAuth.auth()?.currentUser?.uid
         let ref = FIRDatabase.database().reference()
         ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-            print(snapshot)
             // Get user value
             let value = snapshot.value as? NSDictionary
-            let username = value?["username"] as? String ?? ""
-            //let user = User.init(username: username)
+            let searches = value?["searches"] as! NSDictionary
             
+            print(searches.allKeys)
+            
+            for i in 0 ..< searches.allValues.count
+            {
+                self.searchHistory.append(searches.allValues[i] as! String)
+                self.dates.append(searches.allKeys[i] as! String)
+            }
+            //self.searchHistory = searches.allValues as! [String]
+            //print("Searches: \(searches ?? [""])")
+            self.tableView.reloadData()
         })
         { (error) in
             print(error.localizedDescription)
@@ -49,27 +65,31 @@ class SavedSearchesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return searchHistory.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         performSegue(withIdentifier: "loadSavedData", sender: self)
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
+        cell.textLabel?.text = searchHistory[indexPath.row]
+        cell.detailTextLabel?.text = dates[indexPath.row]
+        
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

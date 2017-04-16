@@ -14,6 +14,7 @@
 		293AA8151E46B73C005FD069 /* road.png in Resources */ = {isa = PBXBuildFile; fileRef = 293AA8141E46B73C005FD069 /* road.png */; };
 		2970BAE11E652C8F00092158 /* CompareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2970BAE01E652C8F00092158 /* CompareVC.swift */; };
 		2998CB921EA1A0D800947CEF /* SavedSearchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2998CB911EA1A0D800947CEF /* SavedSearchesTableViewController.swift */; };
+		2998CB941EA3308D00947CEF /* SavedSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2998CB931EA3308D00947CEF /* SavedSearchVC.swift */; };
 		29A4FD6D1E9C21650021A071 /* AutoBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4FD6C1E9C21650021A071 /* AutoBuddyUITests.swift */; };
 		29A4FD7B1E9C6EF30021A071 /* AutoBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4FD7A1E9C6EF30021A071 /* AutoBuddyTests.swift */; };
 		29A956691E303CA700AAAD08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A956681E303CA700AAAD08 /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		293AA8141E46B73C005FD069 /* road.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road.png; path = Assets.xcassets/road.png; sourceTree = "<group>"; };
 		2970BAE01E652C8F00092158 /* CompareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareVC.swift; sourceTree = "<group>"; };
 		2998CB911EA1A0D800947CEF /* SavedSearchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedSearchesTableViewController.swift; sourceTree = "<group>"; };
+		2998CB931EA3308D00947CEF /* SavedSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedSearchVC.swift; sourceTree = "<group>"; };
 		29A4FD6A1E9C21650021A071 /* AutoBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A4FD6C1E9C21650021A071 /* AutoBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoBuddyUITests.swift; sourceTree = "<group>"; };
 		29A4FD6E1E9C21650021A071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				2970BAE01E652C8F00092158 /* CompareVC.swift */,
 				290529511E7E3E3E00362303 /* DetailsVC.swift */,
 				29A9566C1E303CA700AAAD08 /* Main.storyboard */,
+				2998CB931EA3308D00947CEF /* SavedSearchVC.swift */,
 				2998CB911EA1A0D800947CEF /* SavedSearchesTableViewController.swift */,
 				29225A461E81D6AC00131316 /* MapVC.swift */,
 				29A9566F1E303CA700AAAD08 /* Assets.xcassets */,
@@ -467,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2998CB941EA3308D00947CEF /* SavedSearchVC.swift in Sources */,
 				29A9566B1E303CA700AAAD08 /* LoginVC.swift in Sources */,
 				29225A471E81D6AC00131316 /* MapVC.swift in Sources */,
 				290529521E7E3E3E00362303 /* DetailsVC.swift in Sources */,

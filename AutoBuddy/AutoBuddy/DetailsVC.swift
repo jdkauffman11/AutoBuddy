@@ -55,15 +55,15 @@ class DetailsVC: UIViewController {
         
         super.viewDidLoad()
        
-//        DispatchQueue.main.async {
-//            self.getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(self.idOne!)/equipment?fmt=json&api_key=\(self.key)", vehicle: 1)
-//         
-//        }
-//        
-//        DispatchQueue.main.async {
-//            
-//            self.getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(self.idTwo!)/equipment?fmt=json&api_key=\(self.key)", vehicle: 2)
-//        }
+        DispatchQueue.main.async {
+            self.getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(self.idOne)/equipment?fmt=json&api_key=\(self.key)", vehicle: 1)
+         
+        }
+        
+        DispatchQueue.main.async {
+            
+            self.getJSONData(path: "https://api.edmunds.com/api/vehicle/v2/styles/\(self.idTwo)/equipment?fmt=json&api_key=\(self.key)", vehicle: 2)
+        }
         
         
     }

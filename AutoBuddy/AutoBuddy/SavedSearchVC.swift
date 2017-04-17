@@ -61,17 +61,17 @@ class SavedSearchVC: UIViewController, UITextFieldDelegate, UITableViewDelegate,
         return searchHistory.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        performSegue(withIdentifier: "loadSavedData", sender: self)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        
+//        performSegue(withIdentifier: "loadSavedData", sender: self)
+//    }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         cell.textLabel?.text = searchHistory[indexPath.row]
-        cell.detailTextLabel?.text = dates[indexPath.row]
+        //cell.detailTextLabel?.text = dates[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = self.tableView.backgroundColor
         // Configure the cell...

@@ -1,0 +1,6 @@
+framework module Pods_AutoBuddyTests {
+  umbrella header "Pods-AutoBuddyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
